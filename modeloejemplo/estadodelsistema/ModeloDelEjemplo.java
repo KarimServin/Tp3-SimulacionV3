@@ -59,7 +59,7 @@ public class ModeloDelEjemplo extends EstadoDelSistema {
        }
             }
 		return -1;
-		//retorna numero servidor libre
+	
 	}
 	
 
@@ -68,8 +68,7 @@ public class ModeloDelEjemplo extends EstadoDelSistema {
 	}
 	
 	public void atenderSolicitud(Solicitud solicitudParaAgregar, int numServidor) {//+
-		
-		System.out.println("\t\t-- El MODELO atiende una solicitud de la clase " + solicitudParaAgregar.getClase() + ".");
+
 		servidores[numServidor].pasarAOcupado(solicitudParaAgregar); 
 	}
 

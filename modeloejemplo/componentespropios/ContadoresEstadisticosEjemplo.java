@@ -91,7 +91,7 @@ public class ContadoresEstadisticosEjemplo extends ContadoresEstadisticos {
 	}
 	
      public double getTiempoPromedioEnKiosco() {
-		
+    	 System.out.println(tiempoEnKiosco);
 		return tiempoEnKiosco / cantSolicitudesProcesadas;
 		
 	}

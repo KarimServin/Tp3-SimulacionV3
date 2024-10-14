@@ -58,6 +58,7 @@ public class ProgramaPrincipal {
 			
 		}while(!terminoLaSimulacion(reloj,contadores));
 		
+	    //System.out.println("RELOJJJJJ:" + reloj.getValor());
 		reporte.run(contadores);
 
 	}
@@ -75,7 +76,7 @@ public class ProgramaPrincipal {
 		//TODO Aca se debe programar según el fin sea por tiempo o cantidad.
 		
 		//Ejemplo por tiempo
-		double tiempoDeSimulacion = 45;
+		double tiempoDeSimulacion = 47.3;
 		if(reloj.getValor() >= tiempoDeSimulacion) return true;
 		return false;
 		

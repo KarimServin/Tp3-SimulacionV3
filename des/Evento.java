@@ -14,6 +14,7 @@ public abstract class Evento {
 	public Evento(double saltoDeTiempo) {
 		super();
 		this.setTiempoQueFaltaParaQueOcurra(saltoDeTiempo);
+		
 	}
 
 	public double getTiempoDeOcurrencia() {

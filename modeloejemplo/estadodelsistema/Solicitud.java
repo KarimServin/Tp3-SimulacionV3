@@ -12,31 +12,21 @@ public class Solicitud {
 	private double tiempoServicioAdicional;
 	private double tiempoServicioTotal;
 	private double tiempoLlegada;
+	private double tiempoInicioServicio;
 	private TipoServicio tipoServicio;
 	private int cantArticulos;
 	private double importe;
 	
-	
-	/*
-	public Solicitud(int clase, double tiempoEntreArribo, double tiempoServicioBase, double tiempoServicioAdicional,
-			double tiempoServicioTotal, double tiempoLlegada, TipoServicio tipoServicio, int cantArticulos,
-			double importe, double costo, double beneficioSolicitud,LibreriaDeRutinasEjemplo unaLibreria) {
-		super();
-		this.libreria = unaLibreria;
-		this.clase = clase;
-		this.tiempoEntreArribo = libreria.tiempoEntreArribosSolicitudes();
-		this.tiempoServicioBase = libreria.tiempoDeProcesamiento();
-		this.tiempoServicioAdicional = tiempoServicioAdicional;
-		this.tiempoServicioTotal = tiempoServicioTotal;
-		this.tiempoLlegada = tiempoLlegada;
-		this.tipoServicio = tipoServicio;
-		this.cantArticulos = cantArticulos;
-		this.importe = importe;
-		this.costo = costo;
-		this.beneficioSolicitud = beneficioSolicitud;
+	public double getTiempoInicioServicio() {
+		return tiempoInicioServicio;
 	}
-	*/
 
+	public void setTiempoInicioServicio(double tiempoInicioServicio) {
+		this.tiempoInicioServicio = tiempoInicioServicio;
+	}
+
+	
+	
 	public double getTiempoEntreArribo() {
 		return tiempoEntreArribo;
 	}

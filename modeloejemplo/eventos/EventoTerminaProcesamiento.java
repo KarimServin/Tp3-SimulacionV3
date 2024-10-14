@@ -20,6 +20,7 @@ public class EventoTerminaProcesamiento extends Evento {
 		super(tiempoDeOcurrencia);
 		numeroServidorQueQuedaLibre = servidorALibre; 
 		solicitud = unaSolicitud;
+		
 	}
 
 	@Override
@@ -35,8 +36,9 @@ public class EventoTerminaProcesamiento extends Evento {
 		contadoresEjemplo.agregarTiempoDeOcupacion(solicitud.getTiempoServicioTotal(), numeroServidorQueQuedaLibre);
 		contadoresEjemplo.agregarBeneficios(solicitud.getBeneficioSolicitud());
 		contadoresEjemplo.agregarTiempoEnKiosco(getTiempoDeOcurrencia()-solicitud.getTiempoLlegada());
+		System.out.println("OLAAAAAAAAAAAAAA: " + (solicitud.getTiempoLlegada()));
 		contadoresEjemplo.sumarClientePorServidor(numeroServidorQueQuedaLibre);
-
+		
 		
 		ModeloDelEjemplo modeloActual = (ModeloDelEjemplo) modelo;
 		
@@ -53,6 +55,7 @@ public class EventoTerminaProcesamiento extends Evento {
 			solicitudAProcesar.setTiempoServicioAdicional(tiempoAdicional);
 			double tiempoTotal = duracionDelProcesamiento + tiempoAdicional;
 			solicitudAProcesar.setTiempoServicioTotal(tiempoTotal);
+			solicitudAProcesar.setTiempoInicioServicio(getTiempoDeOcurrencia());
 			modeloActual.atenderSolicitud(solicitudAProcesar,numeroServidorQueQuedaLibre);
 			
 			

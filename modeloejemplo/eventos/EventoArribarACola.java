@@ -4,6 +4,7 @@ import des.ContadoresEstadisticos;
 import des.EstadoDelSistema;
 import des.Evento;
 import des.ListaDeEventos;
+import des.ProgramaPrincipal;
 import modeloejemplo.componentespropios.ContadoresEstadisticosEjemplo;
 import modeloejemplo.componentespropios.LibreriaDeRutinasEjemplo;
 import modeloejemplo.estadodelsistema.ModeloDelEjemplo;
@@ -14,6 +15,7 @@ public class EventoArribarACola extends Evento {
 
 	public EventoArribarACola(double tiempoDeOcurrencia) {
 		super(tiempoDeOcurrencia);
+		
 	}
 
 	@Override
@@ -60,14 +62,14 @@ public class EventoArribarACola extends Evento {
 		
 			//modeloActual.atenderSolicitud(solicitudParaAgregar,numServidorLibre);
 			//contadoresEjemplo.agregarTiempoDeOcupacion(tiempoTotal,numServidorLibre);
-			double duracionDelProcesamiento = libreria.tiempoDeProcesamiento(valorParametro);
+			double duracionDelProcesamiento = libreria.tiempoDeProcesamiento(valorParametro); //ok
 			
 			solicitudParaAgregar.setTiempoServicioBase(duracionDelProcesamiento);
 			double tiempoAdicional = calcularTiempoAdicional(valorParametro, solicitudParaAgregar.getCantArticulos(),duracionDelProcesamiento); 
 			solicitudParaAgregar.setTiempoServicioAdicional(tiempoAdicional);
 			double tiempoTotal = duracionDelProcesamiento + tiempoAdicional;
 			solicitudParaAgregar.setTiempoServicioTotal(tiempoTotal);
-			
+			solicitudParaAgregar.setTiempoInicioServicio(getTiempoDeOcurrencia());
 			modeloActual.atenderSolicitud(solicitudParaAgregar,numServidorLibre);
 			//contadoresEjemplo.agregarTiempoDeOcupacion(tiempoTotal,numServidorLibre);
 			System.out.println(tiempoTotal);

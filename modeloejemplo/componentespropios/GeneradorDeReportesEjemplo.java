@@ -29,9 +29,9 @@ public class GeneradorDeReportesEjemplo extends GeneradorDeReportes {
 			System.out.println("Para el servidor " + i + " el tiempo de ocupación es " + contadoresEjemplo.getTiempoOcupadoServidor(i));
 			
 			System.out.println("Para el servidor " + i + " la tasa de atención (clientes por hora) es:  " 
-			+ contadoresEjemplo.tasaAtencion(45,i));
+			+ contadoresEjemplo.tasaAtencion(48.4,i));
 			System.out.println("Para el servidor " + i + " el % de tiempo libre es :  % " 
-					+ contadoresEjemplo.porcentajeTiempoLibrePorServidor(45,i));
+					+ contadoresEjemplo.porcentajeTiempoLibrePorServidor(48.4,i));
 			
 		}
 		
